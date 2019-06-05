@@ -15,7 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from fa_system import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.index),
+    path('index/',views.index),
+    path('login/',views.login),
+    path('login/action/',views.login_action),
+    path('product/',views.product),
+    path('about/',views.about),
+    path('statusReport/',views.statusReport),
+    path('branchReport/',views.branchReport),
+    path('salesReport/',views.salesReport),
+    path('financialReport/',views.financialReport),
+    path('analyzeData/',views.analyzeData),
+    path('upload/',views.upload),
+    path('analyzeData/',views.analyzeData),
+    path('analysisReport/',views.analysisReport),
+
 ]
