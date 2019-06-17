@@ -18,20 +18,36 @@ from django.urls import path
 from fa_system import views
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
+
+    # 首頁
     path('',views.index),
     path('index/',views.index),
-    path('login/',views.login),
-    path('login/action/',views.login_action),
-    path('product/',views.product),
-    path('about/',views.about),
-    path('statusReport/',views.statusReport),
-    path('branchReport/',views.branchReport),
-    path('salesReport/',views.salesReport),
-    path('financialReport/',views.financialReport),
-    path('analyzeData/',views.analyzeData),
-    path('upload/',views.upload),
-    path('analyzeData/',views.analyzeData),
-    path('analysisReport/',views.analysisReport),
+    path('accounts/login/',views.index),
+
+    # 簡單頁面
+    path('index/product/',views.product),
+    path('index/about/',views.about),
+
+    # 登入/登出
+    path('index/login/',views.login),
+    path('index/login/action/',views.loginAction),
+    path('index/logout/',views.logout),
+
+    # 上傳資料
+    path('index/upload/',views.uploadReport),
+    path('index/upload/action/',views.uploadAction),
+
+    # 呈現資料
+    path('index/goTable/',views.goTable),
+    path('index/boTable/',views.boTable),
+    path('index/gsTable/',views.gsTable),
+    path('index/bsTable/',views.bsTable),
+
+
+    path('index/dataAnalysis/',views.dataAnalysis),
+    path('index/dataAnalysis/report/',views.dataAnalysisReport),
+    path('index/analysisReport/',views.analysisReport),
 
 ]

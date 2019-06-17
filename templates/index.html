@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+
+{% block title %}SaltTea財務管理系統{% endblock title %}
+
+{% block style %}
+<style>
+.col-lg-6{
+    flex:0 0 90%;
+    max-width:90%;
+}
+.col-lg-6 h1{
+    width:100%;
+}
+.col-lg-6 p{
+    width:75%;
+    margin:0 auto;
+    color:rgba(255,255,255,.65);
+}
+</style>
+{% endblock style %}
+
+{% block header %}
+    {% if login %}
+        {% include "headerLogin.html" %} 
+    {% else %}
+        {% include "header.html" %} 
+    {% endif %}
+{% endblock header %}
+
+{% block container %}
+<div class="col-12" style="top:10em;opactiy:1!important;">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4" style=" margin:0 auto;text-align:center">
+            <h1  data-aos-delay="100">Online Financial Analysis System</h1>
+                <p class="mb-4" data-aos-delay="200">
+                Do you want to predict your sales of stores with great accuracy in the future? <br>
+                Do you want to sort out your braches’ revenue and expense?<br>
+                Then you must make good use of our Online Financial Analysis System !</p>
+        </div>
+    </div>
+</div>
+{% endblock container %}
