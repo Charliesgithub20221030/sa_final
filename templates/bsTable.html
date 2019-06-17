@@ -53,7 +53,7 @@
         const month = $('#month').val();
         const branchId = $('#branchId').val();
         const data = { 'month': month, 'branchId': branchId, 'csrfmiddlewaretoken': '{{ csrf_token }}' };
-        $.post('bsTable/action', data, responseHandle);
+        $.post('action', data, responseHandle);
     }
     $('#query').click(queryHandle)
   </script>

@@ -2,16 +2,16 @@
 {% load staticfiles %}
 
 {% block title %}
-    關於我們
+關於我們
 {% endblock title %}
 
 
 {% block header %}
-    {% if login %}
-        {% include "headerLogin.html" %}
-    {% else %}
-        {% include "header.html" %}
-    {% endif %}
+{% if login %}
+{% include "headerLogin.html" %}
+{% else %}
+{% include "header.html" %}
+{% endif %}
 {% endblock header %}
 
 {% block headerTheme %}
@@ -20,62 +20,70 @@ theme2
 
 {% block style %}
 <style>
-#teamMember{
-    z-index:-1;
-}
-#teamMember .row{
-    height:40vh;
-    padding-top:5vh;
-    justify-content: space-around;
-    font-size:24px;
-}
-.filp{
-    height:35vh;
-    flex:0 0 30%;
-    display:flex;
-}
-#teamMember .col{
-    height:100%;
-    width:100%;
-    border-radius:5px;
-    text-align:center;  
-    backface-visibility:hidden;
-    transition:all .5s;
-    transform-style:preserve-3d;
-    position:relative;
-}
-.side{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    padding:3vh 1vw;
-    background-color:#fff;
-    border-radius: 5px;
-}
-.front{
-}
-.back{
-    transform:rotateY(180deg);
-    backface-visibility:hidden;
-}
-#teamMember img{
-    border-radius:5px;
-    background-size:cover;
-    width:90%;
-    height:80%;
-}
-#teamMember hr{
-    margin:1rem 0 .5rem 0;
-}
-#teamMember span{
-    font-weight:bolder;
-}
-.filp:hover .col{
-    transform:rotateY(180deg);
-}
+    #teamMember {
+        z-index: -1;
+    }
 
+    #teamMember .row {
+        height: 40vh;
+        padding-top: 5vh;
+        justify-content: space-around;
+        font-size: 24px;
+    }
+
+    .filp {
+        height: 35vh;
+        flex: 0 0 30%;
+        display: flex;
+    }
+
+    #teamMember .col {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+        backface-visibility: hidden;
+        transition: all .5s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 3vh 1vw;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+    .front {}
+
+    .back {
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+    }
+
+    #teamMember img {
+        border-radius: 5px;
+        background-size: cover;
+        width: 90%;
+        height: 80%;
+    }
+
+    #teamMember hr {
+        margin: 1rem 0 .5rem 0;
+    }
+
+    #teamMember span {
+        font-weight: bolder;
+    }
+
+    .filp:hover .col {
+        transform: rotateY(180deg);
+    }
 </style>
 {% endblock style %}
 
@@ -92,7 +100,7 @@ theme2
                 </div>
                 <div class="back side">
                     <p>
-                    介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
+                        介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
                     </p>
                 </div>
             </div>
@@ -106,7 +114,7 @@ theme2
                 </div>
                 <div class="back side">
                     <p>
-                    介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
+                        介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
                     </p>
                 </div>
             </div>
@@ -122,11 +130,12 @@ theme2
                 </div>
                 <div class="back side">
                     <p>
-                    介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
+                        介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
                     </p>
                 </div>
             </div>
-        </div><div class="filp">
+        </div>
+        <div class="filp">
             <div class="col">
                 <div class="front side">
                     <img src="{% static 'images/'%}B10609002.jpg" alt="">
@@ -135,11 +144,12 @@ theme2
                 </div>
                 <div class="back side">
                     <p>
-                    介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
+                        介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
                     </p>
                 </div>
             </div>
-        </div><div class="filp">
+        </div>
+        <div class="filp">
             <div class="col">
                 <div class="front side">
                     <img src="{% static 'images/'%}B10609002.jpg" alt="">
@@ -148,11 +158,13 @@ theme2
                 </div>
                 <div class="back side">
                     <p>
-                    介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
+                        介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹
                     </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+{% endblock container %}
 </div>
 {% endblock container %}

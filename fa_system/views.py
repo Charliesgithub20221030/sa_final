@@ -121,15 +121,14 @@ def login(request):
 
 # 登入
 def loginAction(request):
+    print('QQ')
     msgToReture = {"message": ""}
-
+    loginFlag = False
     # 確認方法正確
     if request.method == "POST":
-
-        loginFlag = False
-
         uid = request.POST.get("username", "")
         pwd = request.POST.get("password", "")
+        print(uid + ' ' + pwd)
         user = auth.authenticate(username=uid, password=pwd)
 
         if user is not None:
@@ -160,14 +159,12 @@ def loginAction(request):
             else:
                 auth.logout(request)
                 loginFlag = False
-        else:
-            loginFlag = False
-    else:
-        loginFlag = False
 
+    request.session["login"] = loginFlag
     response = HttpResponse()
     response.set_cookie("username", uid)
-    response.content = json.dumps({"loginFlag": True})
+    response.content = json.dumps({"loginFlag": loginFlag})
+    
     return response
 
 
@@ -346,7 +343,7 @@ def gsTableAction(request):
 # 顯示分店銷售報表
 def bsTableAction(request):
     if request.method == "POST":
-
+        print(888)
         uid = request.session.get("username", None)
         month = request.POST.get("month")
 

@@ -43,7 +43,12 @@ urlpatterns = [
     path('index/goTable/',views.goTable),
     path('index/boTable/',views.boTable),
     path('index/gsTable/',views.gsTable),
-    path('index/bsTable/',views.bsTable),
+    path('index/bsTable/', views.bsTable),
+    
+    path('index/goTable/action',views.goTableAction),
+    path('index/boTable/action',views.boTableAction),
+    path('index/gsTable/action',views.gsTableAction),
+    path('index/bsTable/action',views.bsTableAction),
 
 
     path('index/dataAnalysis/',views.dataAnalysis),
